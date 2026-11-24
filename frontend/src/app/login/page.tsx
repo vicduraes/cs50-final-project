@@ -14,10 +14,9 @@ export default function LoginPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-between px-6 py-12">
       <div className="flex flex-1 flex-col items-center justify-center text-center">
-        {/* Logo CultureTrack */}
-        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-stone-200 bg-white shadow-sm">
+        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-paper-border bg-paper-surface shadow-sm">
           <svg
-            className="h-8 w-8 text-stone-900"
+            className="h-8 w-8 text-brand"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -31,22 +30,20 @@ export default function LoginPage() {
           </svg>
         </div>
 
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900">
+        <h1 className="font-serif text-3xl font-bold tracking-tight text-ink">
           CultureTrack
         </h1>
 
-        {/* Tagline */}
-        <p className="mt-3 max-w-xs text-base leading-relaxed text-stone-600">
-          Seu diário cultural de bolso. Registre filmes, livros, teatro e exposições em um só lugar.
+        <p className="mt-3 max-w-xs text-base leading-relaxed text-ink-muted">
+          Your pocket cultural journal. Log movies, books, theater, and exhibitions in one place.
         </p>
 
-        {/* Botão Oficial Entrar com Google */}
         <div className="mt-10 w-full">
           <button
             type="button"
             onClick={handleGoogleLogin}
             disabled={isLoading}
-            className="flex w-full items-center justify-center gap-3 rounded-xl border border-stone-300 bg-white px-5 py-3.5 text-sm font-semibold text-stone-800 shadow-sm transition hover:bg-stone-50 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex w-full items-center justify-center gap-3 rounded-xl border border-paper-border bg-paper-surface px-5 py-3.5 text-sm font-semibold text-ink shadow-sm transition hover:bg-paper-subtle active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24">
               <path
@@ -66,12 +63,12 @@ export default function LoginPage() {
                 fill="#EA4335"
               />
             </svg>
-            <span>{isLoading ? "Conectando..." : "Entrar com Google"}</span>
+            <span>{isLoading ? "Connecting..." : "Sign in with Google"}</span>
           </button>
         </div>
       </div>
 
-      <footer className="text-center text-xs text-stone-400">
+      <footer className="text-center text-xs text-ink-subtle">
         CS50 Final Project • CultureTrack
       </footer>
     </main>
